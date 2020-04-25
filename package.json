@@ -1,13 +1,19 @@
 {
   "name": "jsonfromhtml",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": { "name": "Moin", "url": "https://moin.im" },
+  "keywords": ["json html", "json from html", "html to json", "html2json"],
 
   "main": "entry.js",
   "files": ["entry.js", "LICENSE"],
 
   "scripts": {
     "test": "node test.js"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moinism/jsonfromhtml"
   },
 
   "license": "MIT"

@@ -21,6 +21,7 @@ function jsonFromHTML (el) {
 
   const attrs = Array.from(el.attributes)
     .map(attr => ({ [attr.name]: attr.value }))
+    .reduce((obj, item) => Object.assign(obj, item), {}) // turn array of objects into one object
 
   let element = { nodeName, nodeType: 'element', attrs, children, }
   return element

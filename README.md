@@ -1,6 +1,6 @@
 # Turn HTML DOM to JSON-able structure
 
-👌 Zero dependencies!
+👌 Zero dependencies ⚡️ Ultra lightweight
 
 ```
 npm i -S jsonfromhtml
@@ -38,9 +38,9 @@ Here is my <a href="https://github.com/moinism" target="_blank">Github</a> if yo
 
 ```js
 {
-  "nodeName": "P",
+  "nodeName": "P", // tag name
   "nodeType": "element", // either 'element' or 'text'
-  "attrs": [],
+  "attrs": {}, // only for nodeType == 'element'
   "children": [
     {
       "content": "\nHere is my ",
@@ -49,14 +49,10 @@ Here is my <a href="https://github.com/moinism" target="_blank">Github</a> if yo
     {
       "nodeName": "A",
       "nodeType": "element",
-      "attrs": [ // key-value pairs of all the attributes on the element.
-        {
-          "href": "https://github.com/moinism"
-        },
-        {
-          "target": "_blank"
-        }
-      ],
+      "attrs": { // key-value pairs of all the attributes on the element.
+        "href": "https://github.com/moinism",
+        "target": "_blank"
+      },
       "children": [
         {
           "content": "Github",
