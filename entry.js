@@ -17,7 +17,7 @@ function jsonFromHTML (el) {
 
   const children = Array.from(el.childNodes)
     .map(jsonFromHTML)
-    .flat()
+    .reduce((acc, val) => acc.concat(val), []) // alternative to .flat() to make it compatible with more browsers/runtimes
 
   const attrs = Array.from(el.attributes)
     .map(attr => ({ [attr.name]: attr.value }))
