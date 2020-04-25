@@ -1,0 +1,14 @@
+{
+  "name": "jsonfromhtml",
+  "version": "0.0.1",
+  "author": { "name": "Moin", "url": "https://moin.im" },
+
+  "main": "entry.js",
+  "files": ["entry.js", "LICENSE"],
+
+  "scripts": {
+    "test": "node test.js"
+  },
+
+  "license": "MIT"
+}
