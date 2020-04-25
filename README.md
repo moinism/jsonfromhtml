@@ -36,10 +36,10 @@ Here is my <a href="https://github.com/moinism" target="_blank">Github</a> if yo
 </p>
 ```
 
-```json
+```js
 {
   "nodeName": "P",
-  "nodeType": "element" // either 'element' or 'text'
+  "nodeType": "element", // either 'element' or 'text'
   "attrs": [],
   "children": [
     {
