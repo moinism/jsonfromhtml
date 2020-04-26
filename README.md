@@ -9,7 +9,7 @@ npm i -S jsonfromhtml
 ```js
 const { jsonFromHTML } = require('jsonfromhtml')
 
-const body = jsonFromHTML(document.body) // returns array
+const body = jsonFromHTML(document.body) // returns object
 const json = JSON.stringify(body)
 ```
 

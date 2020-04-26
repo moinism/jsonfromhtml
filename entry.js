@@ -4,6 +4,10 @@
  * @returns {Object}
  */
 
+const flatter = (acc, val) => acc.concat(val)
+const attrMapper = attr => ({ [attr.name]: attr.value })
+const arrReducer = (obj, item) => Object.assign(obj, item)
+
 function jsonFromHTML (el) {
   // only parsing text and element nodes
   // https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
@@ -17,14 +21,13 @@ function jsonFromHTML (el) {
 
   const children = Array.from(el.childNodes)
     .map(jsonFromHTML)
-    .reduce((acc, val) => acc.concat(val), []) // alternative to .flat() to make it compatible with more browsers/runtimes
+    .reduce(flatter, []) // alternative to .flat() to make it compatible with more browsers/runtimes
 
   const attrs = Array.from(el.attributes)
-    .map(attr => ({ [attr.name]: attr.value }))
-    .reduce((obj, item) => Object.assign(obj, item), {}) // turn array of objects into one object
+    .map(attrMapper)
+    .reduce(arrReducer, {}) // turn array of objects into one object
 
-  let element = { nodeName, nodeType: 'element', attrs, children, }
-  return element
+  return { nodeName, nodeType: 'element', attrs, children, }
 }
 
 module.exports = { jsonFromHTML }
