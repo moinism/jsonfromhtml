@@ -7,7 +7,7 @@ npm i -S jsonfromhtml
 ```
 
 ```js
-const { jsonFromHTML } = require('jsonFromHTML')
+const { jsonFromHTML } = require('jsonfromhtml')
 
 const body = jsonFromHTML(document.body) // returns array
 const json = JSON.stringify(body)
@@ -16,7 +16,7 @@ const json = JSON.stringify(body)
 ## Usage
 
 ```js
-const elementArray = jsonFromHTML(domElement)
+const element = jsonFromHTML(domElement)
 ```
 
 Parameter:
@@ -26,7 +26,7 @@ Parameter:
 Returns:
 - An `Object`.
 
-## Returned `Object` Example
+### Returned `Object` Example
 
 Input:
 
