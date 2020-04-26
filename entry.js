@@ -1,7 +1,7 @@
 
 /**
  * @param {HTMLElement} el
- * @returns {Array}
+ * @returns {Object}
  */
 
 function jsonFromHTML (el) {

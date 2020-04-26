@@ -24,9 +24,9 @@ Parameter:
 
 
 Returns:
-- `Array` of `Object`s.
+- An `Object`.
 
-## Returned `Array` Example
+## Returned `Object` Example
 
 Input:
 
@@ -35,6 +35,8 @@ Input:
 Here is my <a href="https://github.com/moinism" target="_blank">Github</a> if you wanna have a looksy.
 </p>
 ```
+
+Output:
 
 ```js
 {
